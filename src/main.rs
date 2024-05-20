@@ -4,7 +4,7 @@ use std::fs;
 
 fn main() {
     let mut numbers = String::new();
-    for _ in 0..50 {
+    for _ in 0..30 {
         let number = generate_number();
         numbers.push_str(format!("{}\n", number).as_str());
     }
@@ -13,7 +13,7 @@ fn main() {
 
 fn generate_number() -> i32 {
     let mut random_number = rand::thread_rng();
-    let number = random_number.gen_range(1..30);
+    let number = random_number.gen_range(1..50);
     number
 }
 
